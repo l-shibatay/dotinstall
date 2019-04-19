@@ -1,0 +1,8 @@
+.target {
+    font-size: 48px;
+    letter-spacing: 3px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}

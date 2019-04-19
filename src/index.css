@@ -1,0 +1,32 @@
+.body {
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.navigation {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    background: rgba(0, 0, 0, .85);
+    border-radius: 4px;
+}
+
+.navigation ul {
+    padding: 20px;
+}
+
+.navigation a {
+    color: #9a3afd;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #c893ff;
+}
