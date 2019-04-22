@@ -18,11 +18,11 @@ interface State {
 }
 
 export default class TypingGame extends React.Component<Props, State> {
-    private initialMessage:string = 'Click to start';
-    private keyupHandler:any;
-    private timer:any;
-    private timeLimit:number = 10 * 1000;
-    private words:ReadonlyArray<string> = (`
+    private initialMessage: string = 'Click to start';
+    private keyupHandler: any;
+    private timer: any;
+    private timeLimit: number = 10 * 1000;
+    private words: ReadonlyArray<string> = (`
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Quas sint ducimus voluptas officiis iure ab deleniti eos dicta,
         dolore blanditiis ipsum sunt consequatur placeat provident quae
@@ -88,7 +88,7 @@ export default class TypingGame extends React.Component<Props, State> {
     }
 
     showResult() {
-        const acuracy:number = this.state.score / (this.state.score + this.state.miss) * 100 || 0;
+        const acuracy: number = this.state.score / (this.state.score + this.state.miss) * 100 || 0;
         alert(`Game Over!!\nScore: ${this.state.score}\nMiss: ${this.state.miss}\nAcuracy: ${acuracy.toFixed(2)}%`);
         this.setState({
             targetWord: this.initialMessage
@@ -100,11 +100,11 @@ export default class TypingGame extends React.Component<Props, State> {
         return this.words[Math.floor(Math.random() * this.words.length)];
     }
 
-    handleKeyDown(evt:KeyboardEvent) {
-        const key:string = evt.key;
+    handleKeyDown(evt: KeyboardEvent) {
+        const key: string = evt.key;
         if (key.length !== 1) return;
 
-        let inputStream:string = this.state.inputStream;
+        let inputStream: string = this.state.inputStream;
 
         if (this.state.targetWord[this.state.index] === key) {
             this.setState({
@@ -130,13 +130,19 @@ export default class TypingGame extends React.Component<Props, State> {
     render() {
         return (
             <div>
-                <Target textNode={ this.state.targetWord } index={ this.state.index } />
+                <Target
+                    textNode={ this.state.targetWord }
+                    index={ this.state.index }
+                />
                 <Info
                     score={ this.state.score }
                     miss={ this.state.miss }
                     remainingTime={ this.state.remainingTime }
                 />
-                <StartButton emitter={this.emitter} isPlaying={!this.state.idle} />
+                <StartButton
+                    emitter={this.emitter}
+                    isPlaying={!this.state.idle}
+                />
             </div>
         )
     }

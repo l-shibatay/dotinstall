@@ -7,14 +7,14 @@ interface Props {
 }
 
 export default class Target extends React.Component<Props, {}> {
-    private maskedText:string;
-    private maskChar:string = '_';
+    private maskedText: string;
+    private maskChar: string = '_'
 
     getMaskedText() {
         return `${
             this.maskChar.repeat(this.props.index) +
             this.props.textNode.substr(this.props.index)
-        }`;
+        }`
     }
 
     render() {
