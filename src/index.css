@@ -1,6 +1,5 @@
-.body {
+body {
     font-family: 'Courier New', monospace;
-    text-align: center;
 }
 
 .container {
@@ -12,21 +11,31 @@
 
 .navigation {
     position: fixed;
-    top: 24px;
-    left: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
     background: rgba(0, 0, 0, .85);
-    border-radius: 4px;
+    width: 100vw;
+    overflow-x: scroll;
 }
 
 .navigation ul {
-    padding: 20px;
+    padding: 0 20px;
+    margin: 0;
+    display: flex;
 }
 
 .navigation a {
+    display: block;
     color: #9a3afd;
+    padding: 16px 12px;
     font-weight: bold;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-decoration: none;
 }
 
 .navigation a:hover {
     color: #c893ff;
+    background: rgba(0, 0, 0, .25);
 }

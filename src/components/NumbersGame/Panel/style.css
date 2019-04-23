@@ -1,0 +1,34 @@
+.panel {
+    position: relative;
+    cursor: pointer;
+    height: 64px;
+    user-select: none;
+    border-radius: 4px;
+    background: #91c500;
+    box-shadow: 0 6px 0 #77a200;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel.is-passed {
+    box-shadow: 0 6px 0 #222;
+    background: #444;
+}
+
+.panel.is-hidden::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: inherit;
+    background: #444;
+    box-shadow: 0 6px 0 #222;
+    border-radius: 4px;
+    z-index: 100;
+}

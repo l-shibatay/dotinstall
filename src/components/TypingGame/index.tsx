@@ -5,6 +5,8 @@ import Target from './Target';
 import Info from './Info';
 import StartButton from './StartButton';
 
+import './style.css'
+
 interface Props {}
 
 interface State {
@@ -91,6 +93,8 @@ export default class TypingGame extends React.Component<Props, State> {
         const acuracy: number = this.state.score / (this.state.score + this.state.miss) * 100 || 0;
         alert(`Game Over!!\nScore: ${this.state.score}\nMiss: ${this.state.miss}\nAcuracy: ${acuracy.toFixed(2)}%`);
         this.setState({
+            score: 0,
+            miss: 0,
             targetWord: this.initialMessage
         });
 
@@ -129,7 +133,7 @@ export default class TypingGame extends React.Component<Props, State> {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <Target
                     textNode={ this.state.targetWord }
                     index={ this.state.index }

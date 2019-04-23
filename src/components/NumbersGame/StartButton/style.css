@@ -1,0 +1,25 @@
+.startButton {
+    outline: none;
+    display: block;
+    font-weight: bold;
+    border: 0;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    box-shadow: 0 6px #962b46;
+    background: #b7516b;
+    cursor: pointer;
+}
+
+.startButton:hover {
+    opacity: 0.85;
+}
+
+.startButton:active {
+    transform: translateY(6px);
+    box-shadow: none;
+}
