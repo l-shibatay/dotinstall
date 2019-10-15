@@ -15,8 +15,7 @@
 }
 
 .panel.is-passed {
-    box-shadow: 0 6px 0 #222;
-    background: #444;
+    filter: grayscale();
 }
 
 .panel.is-hidden::after {

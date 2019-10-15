@@ -15,6 +15,11 @@
     cursor: pointer;
 }
 
+.startButton.is-playing {
+    box-shadow: 0 6px #4f2fb1;
+    background: #6a51b7;
+}
+
 .startButton:hover {
     opacity: 0.85;
 }

@@ -24,15 +24,18 @@ export default class Panel extends React.Component<Props, State> {
         this.bindAllListeners();
     }
     bindAllListeners() {
-        bus.addListener('numbersGame.game.started', this.onGameStarted.bind(this));
+        bus.addListener('numbersgame.game.started', this.onGameStarted.bind(this));
     }
     onGameStarted() {
-        this.setState({ started: true })
+        this.setState({
+            started: true,
+            passed: false
+        })
     }
     onClickPanel() {
         if (this.props.tapTarget === this.props.number) {
             this.setState({ passed: true });
-            bus.emit('numbersGame.panel.passed');
+            bus.emit('numbersgame.panel.passed');
         }
     }
     render() {
